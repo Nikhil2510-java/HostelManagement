@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Room</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 1em;
+            color: #5a67d8;
+        }
+
+        label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+            text-align: left;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            background-color: #5a67d8;
+            color: #fff;
+            border: none;
+            padding: 0.8em 1.2em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 1em;
+        }
+
+        .button:hover {
+            background-color: #434190;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Room</h1>
+        <form id="book-room-form" action="bookroom" method="post">
+            <label for="username">Enter Name:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            
+            
+            <label for="room-type">Select Room Type:</label>
+            <select id="room-type" name="room-type">
+                <option value="2-sharing">2 Sharing Room (Rs 6000)</option>
+                <option value="3-sharing">3 Sharing Room (Rs 5000)</option>
+                <option value="4-sharing">4 Sharing Room (Rs 4000)</option>
+            </select>
+            
+            <label for="payment-method">Select Payment Method:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="online">Online Payment</option>
+                <option value="offline">Offline Payment</option>
+            </select>
+
+            <label for="booking-amount">Booking Amount (in Rs):</label>
+            <input type="text" id="booking-amount" name="booking-amount" placeholder="Enter amount in Rupees" required>
+
+            <button type="submit" class="button">Book Room</button>
+        </form>
+    </div>
+</body>
+</html>

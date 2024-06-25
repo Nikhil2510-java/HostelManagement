@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    box-sizing: border-box; 
+}
+
+.container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="password"], select {
+    width: calc(100% - 16px); 
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1em;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form-specific styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .button {
+        font-size: 1em;
+    }
+}
+
+/* Specific Styles for Each Page (background gradient) */
+.admin, .admin-login, .admin-register, .booking, .index, .maintenance, .manageRoom, .request, .request-maintenance, .requestMaintenanceList, .success, .user, .user-login, .user-register, .view-notices, .view-room {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+/* Specific Styles for Container on Each Page */
+.admin .container, .admin-login .container, .admin-register .container, .booking .container, .index .container, .maintenance .container, .manageRoom .container, .request .container, .request-maintenance .container, .requestMaintenanceList .container, .success .container, .user .container, .user-login .container, .user-register .container, .view-notices .container, .view-room .container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Specific Styles for Heading on Each Page */
+.admin h1, .admin-login h1, .admin-register h1, .booking h1, .index h1, .maintenance h1, .manageRoom h1, .request h1, .request-maintenance h1, .requestMaintenanceList h1, .success h1, .user h1, .user-login h1, .user-register h1, .view-notices h1, .view-room h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+/* Specific Styles for Button on Each Page */
+.admin .button, .admin-login .button, .admin-register .button, .booking .button, .index .button, .maintenance .button, .manageRoom .button, .request .button, .request-maintenance .button, .requestMaintenanceList .button, .success .button, .user .button, .user-login .button, .user-register .button, .view-notices .button, .view-room .button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1em;
+}
+
+.admin .button:hover, .admin-login .button:hover, .admin-register .button:hover, .booking .button:hover, .index .button:hover, .maintenance .button:hover, .manageRoom .button:hover, .request .button:hover, .request-maintenance .button:hover, .requestMaintenanceList .button:hover, .success .button:hover, .user .button:hover, .user-login .button:hover, .user-register .button:hover, .view-notices .button:hover, .view-room .button:hover {
+    background-color: #218838;
+}

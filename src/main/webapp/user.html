@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="Style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Dashboard</h1>
+        <div class="user-actions">
+            <button class="button">View Room Details</button>
+            <button class="button">Request Maintenance</button>
+            <button class="button">View Notices</button>
+            <button class="button">PayRent</button>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const action = this.textContent.trim();
+            if (action === 'View Room Details') {
+                window.location.href = 'view-room.html';
+            } else if (action === 'Request Maintenance') {
+                window.location.href = 'requestMaintenceList.html';
+            } else if (action === 'View Notices') {
+                window.location.href = 'view-notices.html';
+            }else if (action === 'PayRent') {
+                window.location.href = 'rent-payment.html';
+            }
+        });
+    });
+});
+    </script>   
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="Style/styles.css">
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(event.target);
+
+            fetch(event.target.action, {
+                method: 'POST',
+                body: new URLSearchParams(formData)  // Convert form data to URL-encoded string
+            })
+            .then(response => response.text())
+            .then(result => {
+                if (result === "success") {
+                    alert("Successfully registered!");
+                    window.location.href = 'user-login.html';  // Redirect to the login page
+                } else {
+                    alert("Failed to register. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("An error occurred. Please try again.");
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("registrationForm").addEventListener("submit", handleFormSubmission);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration</h1>
+        <form id="registrationForm" action="register-user" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="aadhar">Aadhar no:</label>
+            <input type="text" id="aadhar" name="aadhar" required><br>
+        
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+           
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br>
+            
+            <label for="mobilenumber">Mobile no:</label>
+            <input type="text" id="mobilenumber" name="mobilenumber" required><br>
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+           
+            <button type="submit" class="button">Register</button>
+        </form>
+    </div>
+</body>
+</html>

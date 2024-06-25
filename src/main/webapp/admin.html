@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('Image/admin.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #ffffff;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .admin-actions {
+            display: flex;
+            justify-content: center; 
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .button {
+            width: 200px; 
+            padding: 10px;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px 20px;
+            }
+
+            .admin-actions {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center; 
+            }
+
+            .button {
+                width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <div class="admin-actions">
+            <!-- Button to Add Student -->
+            <button class="button" onclick="window.location.href='user-register.html'">Add Student</button>
+            
+            <!-- Button to Manage Rooms -->
+            <button class="button" onclick="window.location.href='manageRoom.html'">Manage Rooms</button>
+            
+            <!-- Form to View Reports -->
+            <form action="viewUser" method="GET">
+                <button type="submit" class="button">View Reports</button>
+            </form>
+            
+            <!-- Form to View Admin Reports -->
+            <form action="viewAdmin" method="GET">
+                <button type="submit" class="button">View Admin Reports</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
